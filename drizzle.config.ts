@@ -15,11 +15,7 @@ export default defineConfig({
   out: './database/migrations',
   dialect: 'mysql',
   dbCredentials: {
-    host: process.env.HOST || 'localhost',
-    port: parseInt(process.env.PORT || '3306'),
-    user: process.env.USERNAME,
-    password: process.env.PASSWORD || undefined,
-    database: process.env.DATABASE || 'tgbot',
+    url: process.env.DATABASE_URL!
   },
   verbose: true,
   strict: true,
