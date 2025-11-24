@@ -6,5 +6,8 @@ export const BOT_COMMANDS = {
   BROADCAST_RETRY: 'broadcast_retry',
 
   // Команды для админов
-  STATS: 'stats'
+  STATS: 'stats',
+
+  // Команды для ипотеки
+  MORTGAGE: 'mortgage',
 } as const;

@@ -4,7 +4,14 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
-  schema: './src/database/schema/*',
+  schema: [
+    './src/app/modules/account/schemas/accounts.ts',
+    './src/app/modules/account-token/schemas/account-tokens.ts',
+    './src/app/modules/user/schemas/users.ts',
+    './src/app/modules/refresh-token/schemas/refresh-tokens.ts',
+    './src/app/modules/mortgage/schemas/mortgage-profiles.ts',
+    './src/app/modules/mortgage/schemas/mortgage-calculations.ts',
+  ],
   out: './database/migrations',
   dialect: 'mysql',
   dbCredentials: {

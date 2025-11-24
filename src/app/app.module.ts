@@ -9,6 +9,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { AccountModule } from './modules/account/account.module';
 import { AccountTokenModule } from './modules/account-token/account-token.module';
 import { RefreshTokenModule } from './modules/refresh-token/refresh-token.module';
+import { MortgageModule } from './modules/mortgage/mortgage.module';
 import { DatabaseModule } from '../database/database.module';
 
 @Module({
@@ -33,6 +34,7 @@ import { DatabaseModule } from '../database/database.module';
     RefreshTokenModule,
     AuthModule,
     UsersModule,
+    MortgageModule,
   ],
   controllers: [],
   providers: [

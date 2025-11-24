@@ -3,14 +3,17 @@ import { BullModule } from '@nestjs/bull';
 import { TelegramBot } from './telegram.bot';
 import { TelegramController } from './telegram.controller';
 import { UsersModule } from '../../modules/user/users.module';
+import { MortgageModule } from '../../modules/mortgage/mortgage.module';
 import { BroadcastService } from './broadcast/broadcast.service';
 import { BroadcastProcessor } from './broadcast/broadcast.processor';
 import { BROADCAST_CONFIG } from './broadcast/broadcast.config';
 import { BroadcastHandler } from './broadcast/broadcast.handler';
+import { MortgageHandler } from './mortgage/mortgage.handler';
 
 @Module({
   imports: [
     UsersModule,
+    MortgageModule,
     BullModule.registerQueue({
       name: 'broadcast',
       defaultJobOptions: {
@@ -34,6 +37,7 @@ import { BroadcastHandler } from './broadcast/broadcast.handler';
     BroadcastHandler,
     BroadcastService,
     BroadcastProcessor,
+    MortgageHandler,
   ],
   exports: [TelegramBot]
 })
