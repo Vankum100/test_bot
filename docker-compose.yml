@@ -6,7 +6,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: tgbot
-      # Remove MYSQL_USER and MYSQL_PASSWORD for root user
+      MYSQL_USER: tgbot_user
+      MYSQL_PASSWORD: tgbot_password
     ports:
       - "3306:3306"
     volumes:
